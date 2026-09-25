@@ -1,0 +1,202 @@
+/* ==========================================================================
+   SIN FRONTERAS - Identidad Corporativa & Estilo Urbano Premium
+   Paleta Oficial: Negro Profundo (#0a0a0c), Blanco (#ffffff) y Rojo Acento (#e50914)
+   Tipografía: Syne & Plus Jakarta Sans
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap');
+
+:root {
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #111115;
+  --bg-card: #14141a;
+  --bg-card-hover: #1b1b22;
+  --text-main: #f9f9fb;
+  --text-muted: #9e9ea7;
+  --text-dim: #63636e;
+  --brand-red: #e50914;
+  --brand-red-dark: #b8050e;
+  --brand-red-light: #ff2a34;
+  --brand-gradient: linear-gradient(135deg, #ff2a34 0%, #e50914 60%, #9e030a 100%);
+  --brand-glow: 0 0 30px rgba(229, 9, 20, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-red-subtle: rgba(229, 9, 20, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+/* Tipografía de Identidad */
+.font-display {
+  font-family: 'Syne', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, #ffffff 20%, #f3f3f5 60%, #e50914 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.red-accent-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Botones & Componentes de Acción */
+.btn-red-primary {
+  background: var(--brand-gradient);
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-red-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(229, 9, 20, 0.55);
+  filter: brightness(1.08);
+}
+
+.btn-red-outline {
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.03);
+  color: #f9f9fb;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-red-outline:hover {
+  border-color: var(--brand-red);
+  background: rgba(229, 9, 20, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(229, 9, 20, 0.2);
+}
+
+/* Tarjetas Premium Streetwear */
+.urban-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.urban-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-red), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.urban-card:hover {
+  border-color: var(--border-red-subtle);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.urban-card:hover::before {
+  opacity: 1;
+}
+
+/* Encabezado Fijo */
+#main-header {
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
+}
+
+#main-header.scrolled {
+  background-color: rgba(10, 10, 12, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Zoom de Imágenes */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Barra de Desplazamiento Personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22222b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-red-dark);
+}
+
+/* Modales Legales y Accesibilidad */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Animación de Pulso para Botón Flotante */
+@keyframes redPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: redPulse 2.5s infinite;
+}
