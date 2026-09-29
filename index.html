@@ -597,43 +597,71 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
+          <!-- Direct Contact Hub (Sin formularios para máxima seguridad y confianza) -->
           <div class="lg:col-span-7">
-            <div class="urban-card rounded-2xl p-8 md:p-10">
-              <h3 class="font-display text-2xl font-bold text-white mb-2">Envíanos un Mensaje</h3>
-              <p class="text-xs text-[#9e9ea7] mb-8">Completa el formulario y te responderemos a la brevedad por nuestros canales oficiales.</p>
-
-              <form id="contact-form" class="space-y-6">
-                <div>
-                  <label for="form-name" class="block text-xs uppercase tracking-wider text-[#dedee4] font-medium mb-2">Nombre Completo *</label>
-                  <input type="text" id="form-name" required placeholder="Ej: Carlos Ramírez" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914] text-sm transition-all">
+            <div class="urban-card rounded-2xl p-8 md:p-10 space-y-6">
+              <div>
+                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#ff2a34] mb-2 font-semibold">
+                  Atención Inmediata
                 </div>
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">Comunícate con Nosotros</h3>
+                <p class="text-xs sm:text-sm text-[#9e9ea7] leading-relaxed">
+                  Para brindarte una atención rápida y sin intermediarios, contáctanos directamente a través de nuestros canales oficiales certificados.
+                </p>
+              </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label for="form-email" class="block text-xs uppercase tracking-wider text-[#dedee4] font-medium mb-2">Correo Electrónico *</label>
-                    <input type="email" id="form-email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914] text-sm transition-all">
+              <!-- Main WhatsApp CTA Button -->
+              <a href="https://wa.me/573044020037?text=Hola%20Sin%20Fronteras,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20prendas" target="_blank" rel="noopener noreferrer" class="btn-red-primary w-full p-5 rounded-2xl flex items-center justify-between group shadow-xl">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white">
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.961.895 3.016.896h.005c3.181 0 5.767-2.587 5.768-5.766 0-1.543-.601-2.994-1.693-4.086-1.092-1.092-2.542-1.697-4.09-1.697zm6.758 9.851c-.28.788-1.393 1.442-1.928 1.536-.523.092-1.196.128-1.936-.109-.459-.147-1.05-.347-1.808-.675-3.197-1.385-5.275-4.63-5.435-4.845-.16-.215-1.3-1.733-1.3-3.308 0-1.575.824-2.35 1.118-2.67.294-.32.641-.4 1.018-.4.093 0 .178.005.257.009.231.01.348.024.502.392.193.463.66 1.611.718 1.728.058.118.097.256.02.41-.077.155-.116.252-.232.387-.116.135-.245.302-.35.405-.116.116-.237.243-.102.476.136.233.605.998 1.298 1.615.892.795 1.644 1.042 1.877 1.158.233.116.369.097.505-.059.136-.155.582-.678.737-.91.155-.233.31-.194.524-.116.213.078 1.357.64 1.59.756.233.116.388.174.446.271.058.097.058.563-.222 1.351z"/>
+                    </svg>
                   </div>
-                  <div>
-                    <label for="form-phone" class="block text-xs uppercase tracking-wider text-[#dedee4] font-medium mb-2">Teléfono / WhatsApp</label>
-                    <input type="tel" id="form-phone" placeholder="+57 300 000 0000" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914] text-sm transition-all">
+                  <div class="text-left">
+                    <span class="text-xs uppercase tracking-wider text-white/80 block">Canal Preferente</span>
+                    <strong class="text-white text-base sm:text-lg font-bold">Chatear por WhatsApp</strong>
+                    <span class="text-xs text-white/90 block">+57 304 402 0037</span>
                   </div>
                 </div>
-
-                <div>
-                  <label for="form-message" class="block text-xs uppercase tracking-wider text-[#dedee4] font-medium mb-2">Mensaje o Consulta *</label>
-                  <textarea id="form-message" rows="4" required placeholder="Indícanos en qué prendas o productos estás interesado..." class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-500 focus:outline-none focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914] text-sm transition-all"></textarea>
-                </div>
-
-                <button type="submit" class="btn-red-primary w-full py-4 rounded-xl text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2">
-                  <span>Enviar Consulta</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                   </svg>
-                </button>
+                </div>
+              </a>
 
-                <div id="form-feedback" class="hidden"></div>
-              </form>
+              <!-- Secondary Email CTA Button -->
+              <a href="mailto:soporte@sinfronteras.online?subject=Consulta%20Comercial%20-%20Sin%20Fronteras" class="btn-red-outline w-full p-5 rounded-2xl flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ff2a34]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div class="text-left">
+                    <span class="text-xs uppercase tracking-wider text-[#9e9ea7] block">Consultas por Correo</span>
+                    <strong class="text-white text-base font-semibold">soporte@sinfronteras.online</strong>
+                    <span class="text-xs text-[#9e9ea7] block">Respuesta formal y detallada</span>
+                  </div>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:translate-x-1 transition-transform text-[#dedee4]">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </a>
+
+              <!-- Guarantee strip -->
+              <div class="pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-[#9e9ea7]">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span>Canales 100% verificados y seguros</span>
+                </div>
+                <div class="text-[11px]">
+                  Cali, Valle del Cauca, Colombia
+                </div>
+              </div>
             </div>
           </div>
 
