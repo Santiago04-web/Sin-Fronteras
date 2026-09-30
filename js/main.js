@@ -104,50 +104,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Formulario de Contacto Corporativo
-  const contactForm = document.getElementById('contact-form');
-  const formFeedback = document.getElementById('form-feedback');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const nameInput = document.getElementById('form-name');
-      const emailInput = document.getElementById('form-email');
-      const phoneInput = document.getElementById('form-phone');
-      const messageInput = document.getElementById('form-message');
-
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const phone = phoneInput.value.trim();
-      const message = messageInput.value.trim();
-
-      if (!name || !email || !message) {
-        formFeedback.className = 'mt-4 p-3 rounded-lg text-sm bg-red-950/80 border border-red-800 text-red-200 block';
-        formFeedback.textContent = 'Por favor completa los campos obligatorios (Nombre, Correo y Mensaje).';
-        return;
-      }
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        formFeedback.className = 'mt-4 p-3 rounded-lg text-sm bg-red-950/80 border border-red-800 text-red-200 block';
-        formFeedback.textContent = 'Por favor ingresa un correo electrónico válido.';
-        return;
-      }
-
-      formFeedback.className = 'mt-4 p-3 rounded-lg text-sm bg-emerald-950/80 border border-emerald-700 text-emerald-200 block';
-      formFeedback.textContent = 'Generando mensaje para atención directa...';
-
-      const emailSubject = encodeURIComponent(`Consulta Sin Fronteras - ${name}`);
-      const emailBody = encodeURIComponent(
-        `Nombre: ${name}\nCorreo: ${email}\nTeléfono: ${phone || 'No especificado'}\n\nMensaje:\n${message}\n\nEnviado desde https://sinfronteras.online`
-      );
-
-      setTimeout(() => {
-        window.location.href = `mailto:soporte@sinfronteras.online?subject=${emailSubject}&body=${emailBody}`;
-        contactForm.reset();
-        formFeedback.textContent = 'Mensaje preparado. Tu gestor de correo se ha abierto con los datos listos para enviar a soporte@sinfronteras.online.';
-      }, 700);
-    });
-  }
 });
+
